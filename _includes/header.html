@@ -1,0 +1,62 @@
+<!-- ======= Header ======= -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <!-- <h1 class="d-flex align-items-center">Nova</h1> -->
+      <img src="/assets/img/Logo.png" alt="Jaldhara" />
+    </a>
+
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+          
+        {% for item in site.data.navigation %}
+          {% if page.url == '/' %}
+            {% assign currentLink = item.link %}
+          {% else %}
+            {% assign currentLink = item.link | append: '.html' %}
+          {% endif %}
+
+          {% if item.link != '#' %}
+            <li>
+              <a href="{{ item.link }}" {% if (page.url == currentLink) %} class="active" {% endif %}>{{item.name}}</a>
+            </li>
+          {% else %}
+            <li class="dropdown"><a href="{{ item.link }}">
+              <span>{{item.name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                {% for innerItem in item.links %}
+                  {% assign currentInnerLink = innerItem.link | append: '.html' %}
+                  <li><a {% if page.url == currentInnerLink %} class="active" {% endif %} 
+                    href="{{innerItem.link}}">{{innerItem.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endif %}
+        {% endfor %}
+        <!-- <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Offerings</a></li>
+        <li><a href="portfolio.html">Deliverables</a></li>
+        
+        
+        <li class="dropdown"><a href="#"><span>Knowledge Center</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li><a href="#">Rainwater Harvesting-The Concept</a></li>
+            
+            <li><a href="#">Benefits of Rainwater Harvesting</a></li>
+            <li><a href="#">Work Methodology</a></li>
+          </ul>
+        </li>
+        <li><a href="team.html">Our Customers</a></li>
+        <li><a href="contact.html">Contact</a></li> -->
+      </ul>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->

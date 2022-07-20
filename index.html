@@ -1,0 +1,76 @@
+---
+layout: default
+title: Home
+---
+
+
+
+
+<!-- ======= Call To Action Section ======= -->
+<section id="call-to-action" class="call-to-action">
+  <div class="container" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <h3>Our Mission</h3>
+        <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p> -->
+        <h4 style="color: #fff;">Harvesting rains for a better world</h4>
+        <!-- <a class="cta-btn" href="#">Contact</a> -->
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Call To Action Section -->
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Testimonials</h2>
+
+    </div>
+
+    <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        {% for comment in site.data.comments %}
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              {{comment.comment}}
+            </p>
+            <div class="profile mt-auto">
+              <img src="assets/img/avatar.svg" class="testimonial-img" alt="">
+              <h3>{{comment.name}}</h3>
+              <h4>{{comment.designation}}</h4>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+        <!-- <div class="swiper-slide">
+          <div class="testimonial-item">
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+            </p>
+            <div class="profile mt-auto">
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+            </div>
+          </div>
+        </div> --><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Testimonials Section -->
+

@@ -1,0 +1,18 @@
+---
+layout: default
+title: Our Customers
+---
+
+<section id="customers" class="our-customers">
+  <div class="container">
+    <div class="row"><div class="col"> <h3 class="text-center">Our prominent customers</h3></div></div>
+    <div class="row customers">
+      {% for customer in site.data.customers.customers %}
+        <div class="col-md-6 customer">{{customer}}</div>
+      {% endfor %}
+    </div><!-- Content row end -->
+    <div class="row" style="border: 1px solid #444;border-top:0;padding: 7px">
+      <div class="col text-center">Various individual residential buildings</div>
+    </div>
+  </div><!-- Container end -->
+</section>
