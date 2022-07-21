@@ -2438,3 +2438,7 @@ section {
 .footer a{
   color: var(--color-seconday);
 }
+
+.footer .footer-contact a{
+  color: #2a93c5;
+}
