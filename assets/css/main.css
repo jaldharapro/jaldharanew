@@ -2248,6 +2248,7 @@ section {
   color: #29486a;
   margin-right: 15px;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -2256,6 +2257,10 @@ section {
     margin-right: 0;
     font-size: 18px;
   }
+}
+
+.implementation-of-recharge-systems .steps .step .step-title u{
+  text-transform: capitalize;
 }
 
 /*--------------------------------------------------------------
