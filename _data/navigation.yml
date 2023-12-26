@@ -13,6 +13,30 @@
   link: /work-methodology
 - name: Our offerings
   link: /our-offerings
+  links:
+    - name: Rainwater Harvesting Services
+      link: /our-offerings
+      links:
+        - name: Project Implementation
+          link: /project-implementation
+          links:
+            - name: PRECIPURE® Rainwater Recharge System
+              link: /precipure-rainwater-recharge-system
+            - name: PRECIPURE&#174; Pre-Storage Rainwater Filters
+              link: /implementation-of-storage-and-reuse-systems
+              links:
+                - name: Wall-Mountable Pre-Storage Rainwater Filter
+                  link: /wall-mountable-pre-storage-rainwater-filter
+                - name: Aboveground & Underground Rainwater Filtration System
+                  link: /rainwater-filtration-system
+        - name: Consultancy
+          link: /consultancy
+        - name: Maintenance
+          link: /maintenance
+    - name: Groundwater Investigation Services
+      link: /groundwater-investigation-services
+    - name: Chambules
+      link: /chambules
 - name: Unique deliverables
   link: /unique-deliverables
 - name: Customers

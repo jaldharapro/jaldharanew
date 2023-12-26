@@ -5,8 +5,9 @@
     <a href="/" class="logo d-flex align-items-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <!-- <h1 class="d-flex align-items-center">Nova</h1> -->
-      <img src="/assets/img/Logo.png" alt="Jaldhara" />
+      <h1 class="d-flex align-items-center">Ventur<span>Env</span></h1>
+      <!-- <img src="/assets/img/Logo.png" alt="Jaldhara" /> -->
+
     </a>
 
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -22,7 +23,7 @@
             {% assign currentLink = item.link | append: '.html' %}
           {% endif %}
 
-          {% if item.link != '#' %}
+          {% if item.links == undefined %}
             <li>
               <a href="{{ item.link }}" {% if (page.url == currentLink) %} class="active" {% endif %}>{{item.name}}</a>
             </li>
@@ -30,10 +31,58 @@
             <li class="dropdown"><a href="{{ item.link }}">
               <span>{{item.name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
               <ul>
-                {% for innerItem in item.links %}
-                  {% assign currentInnerLink = innerItem.link | append: '.html' %}
-                  <li><a {% if page.url == currentInnerLink %} class="active" {% endif %} 
-                    href="{{innerItem.link}}">{{innerItem.name}}</a></li>
+                {% for item in item.links %}
+                  {% assign currentInnerLink = item.link | append: '.html' %}
+
+                  {% if item.links == undefined %}
+                    <li>
+                      <a href="{{item.link}}" {% if page.url == currentInnerLink %} class="active" {% endif %}>{{item.name}}</a>
+                    </li>
+                    {% else %}
+                    <li class="dropdown"><a href="{{ item.link }}">
+                      <span>{{item.name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                      <ul>
+                        {% for item in item.links %}
+                          {% assign currentInnerLink = item.link | append: '.html' %}
+        
+                          {% if item.links == undefined %}
+                            <li>
+                              <a href="{{item.link}}" {% if page.url == currentInnerLink %} class="active" {% endif %}>{{item.name}}</a>
+                            </li>
+                            {% else %}
+                            <li class="dropdown"><a href="{{ item.link }}">
+                              <span>{{item.name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                              <ul>
+                                {% for item in item.links %}
+                                  {% assign currentInnerLink = item.link | append: '.html' %}
+                
+                                  {% if item.links == undefined %}
+                                    <li>
+                                      <a href="{{item.link}}" {% if page.url == currentInnerLink %} class="active" {% endif %}>{{item.name}}</a>
+                                    </li>
+                                    {% else %}
+                                    <li class="dropdown"><a href="{{ item.link }}">
+                                      <span>{{item.name}}</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                                      <ul>
+                                        {% for item in item.links %}
+                                          {% assign currentInnerLink = item.link | append: '.html' %}
+                                          
+                                            <li>
+                                              <a href="{{item.link}}" {% if page.url == currentInnerLink %} class="active" {% endif %}>{{item.name}}</a>
+                                            </li>
+                                            
+                                        {% endfor %}
+                                      </ul>
+                                    </li>
+                                  {% endif %}
+                                {% endfor %}
+                              </ul>
+                            </li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    </li>
+                  {% endif %}
                 {% endfor %}
               </ul>
             </li>

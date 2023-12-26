@@ -30,6 +30,7 @@
   --color-primary: #f5eefe;
   --color-secondary: #92bce9; */
   --color-dark: #222;
+  --color-link: #31547c;
 }
 
 /* Smooth scroll behavior */
@@ -71,6 +72,11 @@ h6 {
   width: 100%;
   max-width: 768px;
   padding: 5px 0;
+}
+
+.container h3,
+.container h2{
+  color: #008932;
 }
 
 /*--------------------------------------------------------------
@@ -161,6 +167,8 @@ section {
   font-size: 16px;
   font-weight: 600;
   color: var(--color-primary);
+  justify-content: center;
+  text-align: center;
 }
 
 .breadcrumbs ol a {
@@ -305,9 +313,13 @@ section {
 .header .logo h1 {
   font-size: 30px;
   font-weight: 700;
-  color: #fff;
+  /* color: #fff; */
   font-family: var(--font-secondary);
   margin: 0;
+}
+
+.header .logo h1 span{
+  color: rgb(53, 177, 53);
 }
 
 /*--------------------------------------------------------------
@@ -340,7 +352,8 @@ section {
     font-size: 15px;
     font-weight: 500;
     /* color: rgba(255, 255, 255, 0.6); */
-    color: var(--color-dark);
+    /* color: var(--color-dark); */
+    color: #008932;
     white-space: nowrap;
     transition: 0.3s;
     text-transform: capitalize;
@@ -358,7 +371,7 @@ section {
   .navbar .active:focus,
   .navbar li:hover>a {
     /* color: #fff; */
-    color: #999;
+    color: #39b7e2;
   }
 
   .navbar .dropdown ul {
@@ -384,7 +397,8 @@ section {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--color-dark);
+    /* color: var(--color-dark); */
+    color: #008932;
     text-transform: capitalize;
   }
 
@@ -420,7 +434,11 @@ section {
 
 @media (min-width: 1280px) and (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
-    left: -90%;
+    left: 90%;
+  }
+
+  .navbar > ul > li.dropdown > ul > li.dropdown:hover>ul {
+    left: 100%;
   }
 
   .navbar .dropdown .dropdown:hover>ul {
@@ -1067,7 +1085,7 @@ section {
 
 .team .team-member .social a {
   transition: color 0.3s;
-  color: #31547c;
+  color: var(--color-link);
   margin: 0 10px;
   display: inline-flex;
   align-items: center;
@@ -2168,29 +2186,87 @@ section {
 }
 
 .offerings ul{
-  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.offerings ul li::marker{
+  color: var(--color-link);
 }
 
 .offerings a{
   text-transform: capitalize;
-  line-height: 2;
-  color: #31547c;
+  line-height: 1.2;
+  color: var(--color-link);
+  display: inline-block;
+  margin-top: 8px;
   font-size: 20px;
 }
 
-.offerings p{
+/* .offerings a sup{
+  position: relative;
+  top: -10px;
+    font-size: 11px;
+    left: 4px;
+    margin-right: 10px;
+} */
+
+/* .offerings a sup::after{
+  content: "";
+  --size: 16px;
+  border: 1px solid #31547c;
+  border-radius: 50%;
+  height: var(--size);
+  width: var(--size);
+  display: inline-block;
+  position: absolute;
+  left: -4px;
+  top: 0px;
+
+} */
+
+.offerings .container > p,
+.offerings .container > a{
   font-size: 20px;
-  margin: 7px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.offerings .container > ul > li > a{
+  font-weight: 500;
+}
+
+.offerings .container > ul > li > ul > li > a{
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.offerings .container > ul > li > ul > li > ul > li > a{
+  font-size: 16px;
+}
+
+
+.offerings p{
+  margin: 0;
 }
 
 @media (max-width: 768px){
-  .offerings p, .offerings a{
+  .offerings p, 
+  .offerings a,
+  .offerings .container > p,
+  .offerings .container > a{
     font-size: 18px;
+  }
+  .offerings .container > ul > li > ul > li > a{
+    font-size: 16px;
   }
 }
 
 @media (max-width: 425px){
-  .offerings p,  .offerings a{
+  .offerings p,  .offerings a,
+  .offerings .container > p,
+  .offerings .container > a{
     font-size: 16px;
   }
 }
@@ -2311,7 +2387,7 @@ section {
 /*--------------------------------------------------------------
 # Unique Deliverables
 --------------------------------------------------------------*/
-.deliverables .table th{
+/* .deliverables .table th{
   min-width: 300px;
 }
 
@@ -2319,7 +2395,143 @@ section {
   .deliverables .table th{
     min-width: 200px;
   }
+} */
+
+.deliverables > .container{
+  border: 2px solid #222;
+  background-color: #f7f9fc;
 }
+
+.deliverables .container .col-header{
+  border-bottom: 2px solid #222;
+  font-weight: 600;
+}
+
+.deliverables .container .col-header .col:not(:last-child){
+  border-right: 2px solid #222;
+}
+
+.deliverables > .container > .row:not(:first-child, :last-child) > .col:not(.container){
+  border-bottom: 2px solid #222;
+}
+
+.deliverables > .container > .row > .col:first-child{
+  border-right: 2px solid #222;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  background-color: #222;
+  color: #eee;
+  border-bottom: 1px solid #eee !important;
+  padding: 10px;
+}
+
+.deliverables .container .row:not(:last-child) .container {
+  border-bottom: 1px solid #222;
+}
+
+.deliverables .container .container > .row > .col:first-child{
+  border-right: 1px solid #222;
+}
+
+.deliverables ul{
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.deliverables .adv .col:first-child ul{
+  color: #cc2a2a;
+}
+
+.deliverables .adv .col:last-child ul{
+  color: green;
+}
+
+.deliverables .col-header .col {
+  padding: 0;
+}
+
+.deliverables .col-header .col div:last-child{
+  color: #fff;
+}
+
+.deliverables .col-header .col div{
+  height: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deliverables .col-header .they div:last-child{
+  background-color: #cc2a2a;
+}
+
+.deliverables .col-header .us div:last-child{
+  background-color: green;
+}
+
+.deliverables .container .container .row .col{
+  min-width: 33.33%;
+}
+
+.deliverables .container .container .diff .col{
+  padding-top: 12px;
+}
+
+.deliverables .container .container .adv .col{
+  padding-bottom: 12px;
+}
+
+.deliverables .container .container .diff .col > div{
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.deliverables .container .container .diff .col > div img{
+  width: 48%;
+  min-width: 80px;
+  max-height: 300px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+
+@media (max-width: 579px) {
+  .deliverables{
+    font-size: 14px;
+  }
+
+  .deliverables > .container {
+    overflow-x: scroll;
+  }
+
+  .deliverables .container .row{
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .deliverables > .container >.row >.col{
+    position: relative;
+  }
+
+  .deliverables .container .col-header .col:first-child{
+    min-width: 133px;
+  }
+
+  .deliverables .container .col-header .col:not(:first-child){
+    min-width: 200px;
+  }
+
+  .deliverables > .container .row > .col{
+    min-width: 133px;
+  }
+
+  .deliverables .container .row .col.container{
+    min-width: 400px;
+  }
+} 
 
 /*--------------------------------------------------------------
 # Rainwater Harvesting-The Concept
@@ -2356,6 +2568,32 @@ section {
   border-left: 1px solid #222;
   padding: 5px 10px;
 }
+.our-customers .customers .customer:last-child{
+  border-right: 1px solid #222;
+  border-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Gallery home/Gallery page
+--------------------------------------------------------------*/
+
+.portfolio-home .portfolio-container .portfolio-item{
+  height: 300px;  
+}
+.portfolio-home .portfolio-container .portfolio-item.more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .portfolio-home .portfolio-container .portfolio-item.more{
+    height: 100px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -2390,10 +2628,14 @@ section {
   font-weight: 700;
   letter-spacing: 1px;
   /* color: var(--color-secondary); */
-  color: #27759b;
+  color: #39b7e2;
   font-family: var(--font-secondary);
   margin-top: 3px;
   line-height: 1.2;
+}
+
+.footer .footer-content .footer-info .logo span span{
+  color: rgb(53, 179, 53);
 }
 
 .footer .footer-content .footer-info p {
@@ -2460,7 +2702,7 @@ section {
 }
 
 .footer .footer-content .footer-links ul a {
-  color: #31547c;
+  color: var(--color-link);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;

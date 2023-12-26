@@ -21,6 +21,41 @@ title: Home
   </div>
 </section><!-- End Call To Action Section -->
 
+<section id="portfolio1" class="portfolio portfolio-home">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-header">
+      <h2>Gallery</h2>
+
+    </div>
+
+    <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+      
+
+      <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="300">
+
+        {% for num in (1..5) %}
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <a href="assets/img/gallary/gallary{{num}}.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link">
+            <img src="assets/img/gallary/gallary{{num}}.jpg" class="img-fluid" alt="">
+          </a>
+        </div><!-- End Portfolio Item -->
+        {% endfor %}
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app more">
+          <a href="/gallery">more...</a>
+        </div>
+
+      </div><!-- End Portfolio Container -->
+
+    </div>
+
+    <!-- <a class="text-center" href="/gallery">More</a> -->
+
+  </div>
+</section>
+
+
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials">
   <div class="container" data-aos="fade-up">
@@ -34,21 +69,30 @@ title: Home
       <div class="swiper-wrapper">
 
         {% for comment in site.data.comments %}
-        <div class="swiper-slide">
-          <div class="testimonial-item">
-            <div class="stars">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-            </div>
-            <p>
-              {{comment.comment}}
-            </p>
-            <div class="profile mt-auto">
-              <img src="assets/img/avatar.svg" class="testimonial-img" alt="">
-              <h3>{{comment.name}}</h3>
-              <h4>{{comment.designation}}</h4>
+
+          {% assign stars = 5 %}
+
+          {% if comment.rating != undefined %}
+            {% assign stars = comment.rating %}
+          {% endif %}
+
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                {% for num in (1..stars) %}
+                <i class="bi bi-star-fill"></i>
+                {% endfor %}
+              </div>
+              <p>
+                {{comment.comment}}
+              </p>
+              <div class="profile mt-auto">
+                <img src="assets/img/avatar.svg" class="testimonial-img" alt="">
+                <h3>{{comment.name}}</h3>
+                <h4>{{comment.designation}}</h4>
+              </div>
             </div>
           </div>
-        </div>
         {% endfor %}
 
         <!-- <div class="swiper-slide">
