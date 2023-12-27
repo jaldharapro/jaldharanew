@@ -2397,7 +2397,7 @@ section {
   }
 } */
 
-.deliverables > .container{
+/* .deliverables > .container{
   border: 2px solid #222;
   background-color: #f7f9fc;
 }
@@ -2486,7 +2486,6 @@ section {
 
 .deliverables .container .container .diff .col > div{
   display: flex;
-  /* flex-wrap: wrap; */
 }
 
 .deliverables .container .container .diff .col > div img{
@@ -2531,7 +2530,101 @@ section {
   .deliverables .container .row .col.container{
     min-width: 400px;
   }
-} 
+}  */
+
+.deliverables1 .table thead tr th,
+.deliverables1 .table tbody tr td b{
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.deliverables1 .table thead tr th{
+  vertical-align: middle;
+}
+
+.deliverables1 .table thead tr th:first-child{
+  background-color: #cc2a2a;
+  color: #eee;
+}
+
+.deliverables1 .table thead tr th:last-child{
+  background-color: green;
+  color: #eee;
+}
+
+.deliverables1 .table tbody tr td:first-child b,
+.deliverables1 .table tbody tr td:first-child ul {
+  color: #cc2a2a;
+}
+
+.deliverables1 .table tbody tr td:last-child b,
+.deliverables1 .table tbody tr td:last-child ul {
+  color: green;
+}
+
+.deliverables1 .table tbody tr td ul{
+  padding-left: 20px;
+}
+
+.deliverables1 .table tbody tr td .imgs{
+  margin-top: 5px;
+  max-height: 300px;
+}
+
+.deliverables1 .table tbody tr td .imgs img{
+  max-height: 300px;
+}
+
+.deliverables1 .table tbody tr td .imgs.imgs-41{
+  height: 300px;
+}
+
+.deliverables1 .table tbody tr td .imgs.imgs-42 img{
+  height: 300px;
+  max-width: unset;
+  width: 120px;
+}
+
+@media (max-width: 425px) {
+
+  .deliverables1 .table thead tr th,
+  .deliverables1 .table tbody tr td b{
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .deliverables1 .table tbody tr td{
+    font-size: 14px;
+  }
+
+  .deliverables1 .table tbody tr td .imgs.imgs-41,
+  .deliverables1 .table tbody tr td .imgs.imgs-42 img
+  {
+    height: 180px;
+  }
+
+  
+  .deliverables1 .table tbody tr td .imgs.imgs-51 img,
+  .deliverables1 .table tbody tr td .imgs.imgs-52 img
+  {
+    width: 100%;
+    max-width: unset;
+  }
+
+}
+
+
+
+.deliverables1 .table tbody tr td .imgs img{
+  max-width: 48%;
+  padding: 2px;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .deliverables1 .accordion-body{
+    padding: 0;
+  }
+}
 
 /*--------------------------------------------------------------
 # Rainwater Harvesting-The Concept
