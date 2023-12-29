@@ -1,44 +1,34 @@
 - name: Home
   link: /
-- name: The concept
-  link: '#'
-  links:
-    - name: Rainwater harvesting
-      link: /rainwater-harvesting-the-concept
-    - name: Benefits of rainwater harvesting
-      link: /benefits-of-rainwater-harvesting
 - name: About us
   link: /about
-- name: Work methodology
-  link: /work-methodology
-- name: Our offerings
-  link: /our-offerings
+- name: what We Do
+  link: /what-we-do
   links:
-    - name: Rainwater Harvesting Services
-      link: /our-offerings
+    - name: Rainwater Harvesting
+      link: '#'
       links:
-        - name: Project Implementation
-          link: /project-implementation
-          links:
-            - name: PRECIPURE® Rainwater Recharge System
-              link: /precipure-rainwater-recharge-system
-            - name: PRECIPURE&#174; Pre-Storage Rainwater Filters
-              link: /implementation-of-storage-and-reuse-systems
-              links:
-                - name: Wall-Mountable Pre-Storage Rainwater Filter
-                  link: /wall-mountable-pre-storage-rainwater-filter
-                - name: Aboveground & Underground Rainwater Filtration System
-                  link: /rainwater-filtration-system
+        - name: Implementation
+          link: /implementation
         - name: Consultancy
           link: /consultancy
         - name: Maintenance
           link: /maintenance
-    - name: Groundwater Investigation Services
-      link: /groundwater-investigation-services
+    - name: Groundwater Investigation
+      link: /groundwater-investigation
     - name: Chambules
       link: /chambules
-- name: Unique deliverables
-  link: /unique-deliverables
+- name: Rainwater Harvesting
+  link: '#'
+  links:
+    - name: The Process
+      link: /the-process
+    - name: Benefits
+      link: /benefits
+    - name: Work methodology
+      link: /work-methodology
+- name: why Us
+  link: /why-us
 - name: Customers
   link: /our-customers
 - name: Contact us

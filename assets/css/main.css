@@ -74,9 +74,17 @@ h6 {
   padding: 5px 0;
 }
 
+.container h2,
 .container h3,
-.container h2{
+.container h4,
+.container h5
+{
   color: #008932;
+}
+
+#hero h2,
+#hero h4{
+  color: #000;
 }
 
 /*--------------------------------------------------------------
@@ -1477,7 +1485,8 @@ section {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 5px;
-  color: #1c88ba;
+  /* color: #1c88ba; */
+  color: #009b39;
 }
 
 .contact .info-item p {
@@ -2532,6 +2541,11 @@ section {
   }
 }  */
 
+.deliverables1 h2 > button{
+  font-weight: 600;
+  color: #0097d5;
+}
+
 .deliverables1 .table thead tr th,
 .deliverables1 .table tbody tr td b{
   font-size: 18px;
@@ -2544,12 +2558,12 @@ section {
 
 .deliverables1 .table thead tr th:first-child{
   background-color: #cc2a2a;
-  color: #eee;
+  color: #f3f3f3;
 }
 
 .deliverables1 .table thead tr th:last-child{
   background-color: green;
-  color: #eee;
+  color: #f3f3f3;
 }
 
 .deliverables1 .table tbody tr td:first-child b,
@@ -2585,6 +2599,15 @@ section {
   width: 120px;
 }
 
+@media (max-width: 767px){
+  .deliverables1 .table tbody tr td .imgs.imgs-71 img,
+  .deliverables1 .table tbody tr td .imgs.imgs-72 img
+  {
+    width: 50%;
+    height: 250px;
+  }
+}
+
 @media (max-width: 425px) {
 
   .deliverables1 .table thead tr th,
@@ -2596,10 +2619,15 @@ section {
     font-size: 14px;
   }
 
-  .deliverables1 .table tbody tr td .imgs.imgs-41,
+  .deliverables1 .table tbody tr td .imgs.imgs-41 {
+    height: unset;
+  }
+
+  .deliverables1 .table tbody tr td .imgs.imgs-41 img,
   .deliverables1 .table tbody tr td .imgs.imgs-42 img
   {
     height: 180px;
+    width: 48%;
   }
 
   
@@ -2607,6 +2635,14 @@ section {
   .deliverables1 .table tbody tr td .imgs.imgs-52 img
   {
     width: 100%;
+    max-width: unset;
+  }
+
+  .deliverables1 .table tbody tr td .imgs.imgs-71 img,
+  .deliverables1 .table tbody tr td .imgs.imgs-72 img
+  {
+    width: 75px;
+    height: 200px;
     max-width: unset;
   }
 
@@ -2661,9 +2697,11 @@ section {
   border-left: 1px solid #222;
   padding: 5px 10px;
 }
-.our-customers .customers .customer:last-child{
-  border-right: 1px solid #222;
-  border-bottom: 0;
+
+@media (max-width: 767px){
+  .our-customers .customers .customer:last-child{
+    display: none;
+  }
 }
 
 /*--------------------------------------------------------------
