@@ -2566,6 +2566,15 @@ section {
   color: #f3f3f3;
 }
 
+.deliverables1 .table tbody tr{
+  border-top: 0 !important;
+}
+
+.deliverables1 .table tbody tr:not(:last-child){
+  border-bottom: 0 !important;
+}
+
+
 .deliverables1 .table tbody tr td:first-child b,
 .deliverables1 .table tbody tr td:first-child ul {
   color: #cc2a2a;
