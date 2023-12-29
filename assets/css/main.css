@@ -2309,6 +2309,56 @@ section {
   color: var(--color-primary);
 }
 
+.project-implementation .content .container .row .col .content-shaped-img{
+  object-fit: contain; 
+  float:right;
+  max-width: unset;
+  width: unset;
+  height: auto;
+}
+
+.project-implementation .content .container .row .col .content-shaped-img#shaped-img-1{
+  width: 30%;
+}
+.project-implementation .content .container .row .col .content-shaped-img#shaped-img-2{
+  width: 20%;
+  margin-left: 5%;
+}
+.project-implementation .content .container .row .col .content-shaped-img#shaped-img-3{
+  width: 40%;
+}
+
+@media (max-width: 991px){
+  .project-implementation .content .container .row .col .content-shaped-img#shaped-img-2{
+    width: 30%;
+    margin-left: 5%;
+  }
+
+  .project-implementation .content .container .row .col .content-shaped-img#shaped-img-3{
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px){
+  .project-implementation .content .container .row .col .content-shaped-img#shaped-img-1{
+    width: 50%;
+  }
+  .project-implementation .content .container .row .col .content-shaped-img#shaped-img-2{
+    width: 50%;
+    margin-left: 5%;
+  }
+  .project-implementation .content .container .row .col .content-shaped-img#shaped-img-3{
+    width: 60%;
+  }
+}
+
+@media (max-width: 425px){
+  .project-implementation .container .container{
+    padding: 0;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Implementation of Recharge Systems
 --------------------------------------------------------------*/
