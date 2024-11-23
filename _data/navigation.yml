@@ -8,14 +8,16 @@
     - name: Rainwater Harvesting
       link: '#'
       links:
-        - name: Implementation
-          link: /implementation
+        - name: Products
+          link: /products
+        - name: Installation Services
+          link: /installation-services
         - name: Consultancy
           link: /consultancy
         - name: Maintenance
           link: /maintenance
-    - name: Groundwater Investigation
-      link: /groundwater-investigation
+    - name: Subsurface Investigation
+      link: /subsurface-investigation
     - name: Chambules
       link: /chambules
 - name: Rainwater Harvesting
