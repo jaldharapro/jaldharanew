@@ -2941,6 +2941,10 @@ margin-bottom: 30px;
   font-weight: 600;
 }
 
+/* #portfolio1 .portfolio-container .portfolio-item:first-child img{
+  object-fit: contain;
+} */
+
 @media (max-width: 767px) {
   .portfolio-home .portfolio-container .portfolio-item.more{
     height: 100px;
